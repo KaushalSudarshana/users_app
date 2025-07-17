@@ -2,7 +2,7 @@ import { UserCardProps } from "@/types/user";
 
 export default function UserCard({ name, email, phone, website, company }: UserCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-gray-200">
+<div className="bg-gradient-to-r from-white via-gray-100 to-white bg-opacity-70 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-gray-200 backdrop-blur-sm">
       <div className="mb-4">
         <h3 className="text-xl font-semibold text-gray-900 mb-2">{name}</h3>
         <p className="text-sm text-gray-600 font-medium">{company}</p>
