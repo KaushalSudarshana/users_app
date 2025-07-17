@@ -38,7 +38,7 @@ export default function UserCard({ name, email, phone, website, company }: UserC
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
           </svg>
           <a 
-            href={`https://${website}`} 
+            href={/^https?:\/\//.test(website) ? website : `https://${website}`} 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm"
@@ -51,3 +51,6 @@ export default function UserCard({ name, email, phone, website, company }: UserC
   );
 }
 
+// This component is designed to display user information in a card format.
+// It includes the user's name, email, phone number, website, and company name.
+// The card has a clean design with hover effects for better user interaction.
